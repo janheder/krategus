@@ -3254,6 +3254,8 @@ ul.wp-block-latest-posts {
 	overflow: hidden;
 	display: flex;
 	height: 320px;
+	flex-shrink: 0;
+    max-width: 50%;
 }
 .pharmacy-main figure img{
 	object-fit: cover;
