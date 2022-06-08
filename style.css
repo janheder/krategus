@@ -1284,7 +1284,7 @@ section h2 {
 	text-align: left;
 	margin: 0;
 	font-size: 40px;
-	font-weight: 500;
+	font-weight: 600;
 	margin-bottom: 25px;
 	max-width: 50%;
 }
@@ -1392,19 +1392,18 @@ section h2 {
 .entry-title {
 	color: #50535D;
 	text-align: center;
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 38px;
 }
 
 .single-post .post-thumbnail {
-	max-width: 1300px;
+	max-width: 1340px;
 	margin: 0 auto;
-
 	z-index: 3;
 	position: relative;
 	display: flex;
 	height: 420px;
-
+	padding: 0 20px;
 }
 
 .single-post .post-thumbnail::after {
@@ -1452,6 +1451,9 @@ section h2 {
 	.entry-title {
 		font-size: 36px;
 	}
+	.single-post .post-thumbnail {
+		height: 380px;
+	}
 }
 
 @media screen and (max-width: 575px) {
@@ -1461,6 +1463,9 @@ section h2 {
 
 	.entry-title {
 		font-size: 30px;
+	}
+	.single-post .post-thumbnail {
+		height: 320px;
 	}
 }
 
@@ -2331,6 +2336,7 @@ footer .menu-item a {
 	display: flex;
 	line-height: 2.2;
 	opacity: 0.8;
+	font-weight: 400;
 }
 
 footer li.menu-item.btn {
@@ -2416,6 +2422,19 @@ footer p {
 	}
 	footer h2 {
 		padding-bottom: 10px;
+		display: flex;
+		align-items: center;
+	}
+	footer h2::after{
+		content: "";
+		background: url("img/icon-cheveron-white.svg");
+		height: 6px;
+		width: 20px;
+		display: flex;
+		background-repeat: no-repeat;
+		background-position: right;
+		background-size: contain;
+		flex-grow: 1;
 	}
 	footer h2 + * {
 		display: none;
@@ -2423,6 +2442,9 @@ footer p {
 	}
 	footer h2.active + *{
 		display: flex;
+	}
+	footer h2.active::after{
+		transform: scaleY(-1);
 	}
 	footer p, footer a {
 		line-height: 2.2;
@@ -2462,8 +2484,10 @@ footer p {
 }
 
 .post .entry-content {
-	max-width: 760px;
+	max-width: 800px;
 	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .post .entry-footer {
@@ -2501,7 +2525,7 @@ footer p {
 
 .entry-content h2 {
 	font-size: 30px;
-	font-weight: 500;
+	font-weight: 600;
 	margin-bottom: 15px;
 }
 
@@ -2511,7 +2535,7 @@ footer p {
 
 .entry-content h3 {
 	font-size: 26px;
-	font-weight: 500;
+	font-weight: 600;
 	margin-bottom: 15px;
 }
 
@@ -2682,7 +2706,7 @@ footer p {
 	}
 
 	.entry-content h3 {
-		font-size: 30px;
+		font-size: 24px;
 		margin-bottom: 20px;
 	}
 }
@@ -3253,15 +3277,39 @@ ul.wp-block-latest-posts {
 	border-radius: 5px;
 	overflow: hidden;
 	display: flex;
-	height: 320px;
+	height: 360px;
 	flex-shrink: 0;
     max-width: 50%;
+	width: 50%;
 }
 .pharmacy-main figure img{
 	object-fit: cover;
+	width: 100%;
 }
 .pharmacy-main-content {
 	padding: 50px 30px;
+	display: flex;
+    align-items: center;
+}
+@media screen and (max-width: 991px) {
+	.pharmacy-main-single>.wp-block-group__inner-container {
+		flex-direction: column;
+	}
+	.pharmacy-main figure {
+		height: 280px;
+		max-width: 100%;
+		width: 100%;
+	}
+}
+@media screen and (max-width: 575px) {
+	.pharmacy-main figure {
+		height: 200px;
+	}
+	.pharmacy-main-content {
+		padding: 30px 20px;
+		display: flex;
+		align-items: center;
+	}
 }
 
 
@@ -3317,6 +3365,9 @@ ul.wp-block-latest-posts {
 .files-group .wp-block-file a{
 	display: table-cell;
 	padding: 12px;
+}
+.files-group .wp-block-file a:first-child{
+	color: #50535D;
 }
 .files-group .wp-block-file:nth-child(even)	{
 	background: #F8FAFB;

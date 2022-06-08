@@ -18,8 +18,9 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
-	<link rel="preload" href="<?php bloginfo('template_directory'); ?>/fonts/BasierCircle-Regular-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="<?php bloginfo('template_directory'); ?>/fonts/BasierCircle-Regular.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="<?php bloginfo('template_directory'); ?>/fonts/BasierCircle-Medium.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="<?php bloginfo('template_directory'); ?>/fonts/BasierCircle-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
 <body <?php body_class(); ?>>
@@ -34,7 +35,7 @@
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
-				<button id="navToggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span></span></button>
+				<button id="navToggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Menu"><span></span></button>
 				<?php
 				wp_nav_menu(
 					array(
