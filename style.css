@@ -1377,6 +1377,10 @@ section h2 {
 	.hero .wp-block-buttons .is-style-outline{
 		display: none;
 	  }
+	  .hero .wp-block-buttons{
+		margin-right: 0;
+    margin-left: 0;
+	  }
 }
 
 /* PAGE HEADER

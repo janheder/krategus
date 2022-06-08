@@ -20,7 +20,8 @@ get_header();
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 
-				<div class="post-thumbnail">
+					<div class="post-thumbnail">
+						<img width="1920" height="380" src="<?php echo get_template_directory_uri().'/img/header6.png'; ?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy">			
 					</div>
 			</header><!-- .page-header -->
 
