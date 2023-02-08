@@ -283,3 +283,13 @@ add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
 
 remove_filter( 'render_block', 'wp_render_layout_support_flag', 10, 2 );
 remove_filter( 'render_block', 'gutenberg_render_layout_support_flag', 10, 2 );
+
+
+
+add_action('wp_print_scripts', function () {
+	global $post;
+	if ( is_a( $post, 'WP_Post' ) && !has_shortcode( $post->post_content, 'contact-form-7') ) {
+		wp_dequeue_script( 'google-recaptcha' );
+		wp_dequeue_script( 'wpcf7-recaptcha' );
+	}
+});
